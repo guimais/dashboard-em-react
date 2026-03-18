@@ -1,0 +1,84 @@
+.kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.875rem;
+  margin-bottom: 1.5rem;
+}
+
+.overview-row {
+  display: grid;
+  grid-template-columns: 1fr 280px;
+  gap: 0.875rem;
+  margin-bottom: 1.5rem;
+}
+
+.chart-total {
+  font-size: 1.25rem;
+  font-weight: 700;
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.chart-area { height: 90px; margin-bottom: 0.625rem; }
+
+.chart-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.7rem;
+  color: var(--gray);
+}
+
+.activity-list { display: flex; flex-direction: column; gap: 0.875rem; }
+
+.activity-item { display: flex; align-items: center; gap: 0.75rem; }
+
+.act-avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 8px;
+  font-size: 0.65rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.act-info { flex: 1; min-width: 0; }
+.act-name { font-size: 0.825rem; font-weight: 500; }
+.act-action { font-size: 0.75rem; color: var(--gray); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.act-time { font-size: 0.7rem; color: var(--gray); white-space: nowrap; }
+
+.orders-card { overflow-x: auto; }
+
+.view-all { font-size: 0.78rem; color: var(--accent); cursor: pointer; white-space: nowrap; }
+
+.orders-table { width: 100%; border-collapse: collapse; font-size: 0.85rem; }
+
+.orders-table th {
+  text-align: left;
+  padding: 0 0.75rem 0.75rem;
+  font-size: 0.7rem;
+  font-weight: 500;
+  color: var(--gray);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-bottom: 1px solid var(--border);
+}
+
+.orders-table td {
+  padding: 0.825rem 0.75rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.orders-table tr:last-child td { border-bottom: none; }
+.orders-table tr:hover td { background: rgba(255,255,255,0.015); }
+
+@media (max-width: 1100px) { .kpi-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 900px) { .overview-row { grid-template-columns: 1fr; } }
+@media (max-width: 600px) {
+  .kpi-grid { grid-template-columns: 1fr 1fr; }
+  .orders-table th:nth-child(3), .orders-table td:nth-child(3) { display: none; }
+}

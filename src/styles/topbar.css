@@ -1,0 +1,107 @@
+.topbar {
+  height: 56px;
+  min-height: 56px;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0 1.5rem;
+  border-bottom: 1px solid var(--border);
+  background: rgba(0,0,0,0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.topbar-left { display: flex; align-items: center; gap: 0.875rem; flex: 1; }
+
+.menu-btn {
+  display: none;
+  padding: 5px;
+  border-radius: var(--radius-sm);
+  color: var(--gray);
+  transition: var(--transition);
+}
+
+.menu-btn svg { width: 18px; height: 18px; display: block; }
+.menu-btn:hover { color: var(--white); }
+
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.825rem;
+  color: var(--gray);
+}
+
+.breadcrumb svg { width: 12px; height: 12px; }
+.breadcrumb-active { color: var(--white); font-weight: 500; }
+
+.topbar-center { flex: 1; max-width: 340px; }
+
+.search-wrap {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 0 0.75rem;
+  transition: border-color var(--transition);
+}
+
+.search-wrap:focus-within { border-color: var(--border-accent); }
+
+.search-wrap svg { width: 14px; height: 14px; color: var(--gray); flex-shrink: 0; }
+
+.search-wrap input {
+  background: none;
+  border: none;
+  color: var(--white);
+  font-size: 0.825rem;
+  height: 32px;
+  width: 100%;
+}
+
+.search-wrap input::placeholder { color: var(--gray); }
+
+.topbar-right { display: flex; align-items: center; gap: 0.5rem; }
+
+.icon-btn {
+  position: relative;
+  padding: 5px;
+  border-radius: var(--radius-sm);
+  color: var(--gray);
+  transition: var(--transition);
+}
+
+.icon-btn svg { width: 18px; height: 18px; display: block; }
+.icon-btn:hover { color: var(--white); }
+
+.notif-dot {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  width: 6px;
+  height: 6px;
+  background: var(--accent);
+  border-radius: 50%;
+  border: 1.5px solid var(--bg);
+}
+
+.topbar-avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: var(--radius-sm);
+  background: var(--gradient);
+  color: #000;
+  font-size: 0.65rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .menu-btn { display: flex; }
+  .topbar-center { display: none; }
+}

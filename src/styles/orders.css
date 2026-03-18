@@ -1,0 +1,91 @@
+.orders-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 0.875rem;
+  margin-bottom: 1.25rem;
+  flex-wrap: wrap;
+}
+
+.orders-search {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 0 0.75rem;
+  flex: 1;
+  max-width: 300px;
+  transition: border-color var(--transition);
+}
+
+.orders-search:focus-within { border-color: var(--border-accent); }
+
+.orders-search svg { width: 14px; height: 14px; color: var(--gray); flex-shrink: 0; }
+
+.orders-search input {
+  background: none;
+  border: none;
+  color: var(--white);
+  font-size: 0.825rem;
+  height: 34px;
+  width: 100%;
+}
+
+.orders-search input::placeholder { color: var(--gray); }
+
+.orders-filters { display: flex; gap: 0.4rem; flex-wrap: wrap; }
+
+.orders-filters button {
+  padding: 0.3rem 0.825rem;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  color: var(--gray);
+  font-size: 0.78rem;
+  transition: var(--transition);
+}
+
+.orders-filters button:hover,
+.orders-filters button.active {
+  background: var(--accent-soft);
+  border-color: var(--border-accent);
+  color: var(--accent);
+}
+
+.orders-table.full { width: 100%; border-collapse: collapse; font-size: 0.85rem; }
+
+.orders-table.full th {
+  text-align: left;
+  padding: 0 0.875rem 0.75rem;
+  font-size: 0.7rem;
+  font-weight: 500;
+  color: var(--gray);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-bottom: 1px solid var(--border);
+}
+
+.orders-table.full td {
+  padding: 0.825rem 0.875rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.orders-table.full tr:last-child td { border-bottom: none; }
+.orders-table.full tr:hover td { background: rgba(255,255,255,0.015); }
+
+.order-customer { font-weight: 500; }
+.order-date { color: var(--gray); font-size: 0.78rem; }
+
+.no-results { text-align: center; color: var(--gray); padding: 3rem 0; }
+
+.table-footer {
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
+  font-size: 0.78rem;
+  color: var(--gray);
+}
+
+@media (max-width: 700px) {
+  .orders-table.full th:nth-child(3), .orders-table.full td:nth-child(3),
+  .orders-table.full th:nth-child(6), .orders-table.full td:nth-child(6) { display: none; }
+}
