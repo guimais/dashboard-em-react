@@ -1,16 +1,33 @@
-# React + Vite
+# Nexus Corp — Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Meu primeiro projeto em React. Um dashboard empresarial fictício construído do zero, sem bibliotecas de UI ou gráficos externos.
 
-Currently, two official plugins are available:
+## Sobre o projeto
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Dashboard de gestão empresarial para a empresa fictícia **Nexus Corp**, desenvolvido como projeto de aprendizado de React. O objetivo foi aplicar os fundamentos da biblioteca em um contexto real e completo, com design moderno e código limpo.
 
-## React Compiler
+## Funcionalidades
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Visão Geral** — KPIs, gráfico de receita semanal e pedidos recentes
+- **Análises** — métricas de desempenho, gráfico anual, distribuição por categoria e canais de venda
+- **Pedidos** — tabela com busca por cliente/ID e filtros por status
+- **Equipe** — cards dos membros com filtro por departamento
+- **Configurações** — formulário de empresa, preferências de notificação e dados da conta
 
-## Expanding the ESLint configuration
+## Tecnologias
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- [React 18](https://react.dev) — `useState`, `useMemo`, `useEffect`
+- [Vite](https://vite.dev) — bundler e servidor de desenvolvimento
+- CSS puro com variáveis customizadas — sem frameworks de estilo
+- Gráficos em SVG — sem bibliotecas externas (área, donut)
+
+## Design
+
+Paleta minimalista em azul marinho, preto e branco. Layout em sidebar fixa + área de conteúdo principal, totalmente responsivo para mobile.
+
+## Como rodar
+
+```bash
+npm install
+npm run dev
+```
